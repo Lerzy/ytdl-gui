@@ -1,3 +1,9 @@
+# virtual environments
+dev-env
+
+#download folder
+ytdl-gui-downloads
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
