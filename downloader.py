@@ -1,9 +1,6 @@
 from yt_dlp import YoutubeDL
 
 def Downloader(video_url, path, mode):
-    print(video_url)
-    print(path)
-    print(mode)
 
     mp4_opts  = {
         'outtmpl': path + '/%(title)s.%(ext)s',
