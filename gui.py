@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
 import os
+import sys
 from downloader import Downloader
 
 sg.theme("Black")
@@ -20,7 +21,12 @@ layout = [
 window = sg.Window('youtube-dl GUI', layout)
 
 download_folder = "ytdl-gui-downloads"
-parent_dir = os.path.dirname(os.path.abspath(__file__))
+
+if getattr(sys, "frozen", False):
+    parent_dir = os.path.dirname(sys.executable)
+elif __file__:
+    parent_dir = os.path.dirname(__file__)
+print(parent_dir)
 download_path = os.path.join(parent_dir, "ytdl-gui-downloads")
 
 
