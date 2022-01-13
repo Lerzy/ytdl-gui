@@ -26,7 +26,7 @@ if getattr(sys, "frozen", False):
     parent_dir = os.path.dirname(sys.executable)
 elif __file__:
     parent_dir = os.path.dirname(__file__)
-print(parent_dir)
+
 download_path = os.path.join(parent_dir, "ytdl-gui-downloads")
 
 
